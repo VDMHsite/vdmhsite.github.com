@@ -1,0 +1,22 @@
+@all = red
+*{
+	margin: 0;
+	width: auto;
+	.{};
+	
+	footer{
+
+	};
+	nav{
+		ul{
+			display: inline-block;
+		};
+	};
+	aside{};
+
+}
+header{
+		color: red;
+		height: 150px;
+		width: 50px;
+	};
