@@ -1,4 +1,4 @@
-@all = red
+
 *{
 	margin: 0;
 	width: auto;
@@ -18,4 +18,86 @@
 	};
 	aside{};
 
+}
+/*Global varibles*/
+
+@mainColor:#344556;
+@mainColor2: lighten(@mainColor, 50%);
+@textColor: #34ee23;
+@coil:#000fff;
+
+.backlin (@col, @col2){
+	background-image: -webkit-linear-gradient(@col, @col2);
+	background-image: -moz-linear-gradient(@col, @col2);
+	background-image: -ms-linear-gradient(@col, @col2);
+	background-image: -o-linear-gradient(@col, @col2);
+	-pie-background-image: linear-gradient(@col, @col2);
+	background-image: linear-gradient(@col, @col2);
+}
+.bordrad(@bordra){
+	-webkit-border-radius:@bordra;
+	-moz-border-radius:@bordra;
+	-ms-border-radius:@bordra;
+	-o-border-radius:@bordra;
+	-pie-border-radius:@bordra;
+	border-radius:@bordra;
+}
+.boxshad(@boxsha){
+	-webkit-box-shadow:@boxsha;
+	-moz-box-shadow:@boxsha;
+	-ms-box-shadow:@boxsha;
+	-o-box-shadow:@boxsha;
+	-pie-box-shadow:@boxsha;
+	box-shadow:@boxsha;
+}
+.borderr(@bord){
+	-webkit-border-image:@bord;
+	-moz-border-image:@bord;
+	-ms-border-image:@bord;
+	-o-border-image:@bord;
+	-pie-border-image:@bord;
+	border-image:@bord;
+}
+.back(@col){
+	_background: @col;
+	background: @col;
+	-pie-background: @col;
+	//backgound: @col;
+}
+.boxsizing(@boxsiz){
+	-webkit-box-sizing:@boxsiz;
+	-moz-box-sizing:@boxsiz;
+	-ms-box-sizing:@boxsiz;
+	-o-box-sizing:@boxsiz;
+	box-sizing:@boxsiz;
+}
+
+
+*{
+
+	margin: 0px;
+	_margin: 0px;
+	//margin: 0px;
+	padding: 0px;
+	_padding:0px;
+	//padding:0px;
+	text-decoration: none;
+	header, nav, section, aside, footer{
+		display: block;
+	}
+	a{
+		color:@coil;
+		.backlin(@mainColor, @mainColor2);
+		&:hover{
+			.backlin(@mainColor2, @mainColor);
+		}
+	}
+	ul{
+		display: inline-block;
+		list-style: none;
+		a{
+			.back(@mainColor2);
+			
+		}
+	}
 }
