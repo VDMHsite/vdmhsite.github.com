@@ -1,7 +1,9 @@
 $(document).ready(function(){
-	$('video').on('click','video', function(){
-			$('video').fadeout()
+
+	$(this).on('click','this', function(){
+			$(this).fadeOut()
 		});
+
 	$('.heading').blurjs({
 		// source: 'body',
 		radius: 100,
