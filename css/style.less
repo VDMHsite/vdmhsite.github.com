@@ -3,13 +3,45 @@
 @second_logo_col:rgb(26,177,242);
 @symbol:url(../img/symb.png);
 *{
+	position: absolute;
 	margin: 0;
 	width: auto;
+	hyphens: auto;
+	word-wrap: break-word;
+	video{
+		width: auto;
+		height: auto;
+		z-index: -30;
+	}
+	.heading{
+		width: 1300px;
+		height: 400px;
+		z-index: 20;
+	}
+	img{
+		src:@symbol;
+	}
+	.header_pic{
+		width: 600px;
+		height: 600px;
+		z-index: +11;
+		background: @symbol no-repeat;
+	}
+	body{
+		background: url('../img/toe.jpg');
+		figure{
+			margin: auto;
+
+		}
+
+		display:block;
 	header{
+		background-origin: content-box;
 		background: @symbol no-repeat;
 		background-size: contain;
-		height: 150px;
-		width: 50px;
+		background-attachment:local;
+		height: auto;
+		width: 1300px;
 	};
 	footer{
 
@@ -21,6 +53,7 @@
 	};
 	aside{};
 
+}
 }
 /*Global varibles*/
 
@@ -104,3 +137,15 @@
 		}
 	}
 }
+@media screen and (max-width: 700px) {
+  .tabbed { width: 400px }
+  .tabbed > label { display: none }
+  .tabs > div {
+    width: 400px;
+    border: none;
+    padding: 0;
+    opacity: 1;
+    position: relative;
+    transform: none;
+    margin-bottom: 60px;
+  }}
